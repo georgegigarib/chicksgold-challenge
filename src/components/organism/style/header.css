@@ -1,0 +1,162 @@
+.header {
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: #313041;
+  color: white;
+  position: fixed;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.button-section {
+  margin-right: 30px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.menu-section {
+  display: flex;
+  align-items: center;
+  gap: 1.9rem;
+}
+
+.logo {
+  height: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.cart-menu {
+  background-color: transparent;
+  position: relative;
+}
+
+.cart-menu button {
+  border: 0;
+  padding: 0.4rem 0.8rem;
+  border-radius: 10px;
+  background-color: transparent;
+  display: flex;
+  gap: 0.4rem;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+.cart-menu img {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.user-menu {
+  background-color: green;
+  border-radius: 6px;
+  position: relative;
+}
+
+.user-menu button {
+  padding: 0.4rem 0.8rem;
+  border-radius: 10px;
+  display: flex;
+  gap: 0.4rem;
+  align-items: center;
+  text-transform: uppercase;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.user-menu img {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  background: white;
+  color: black;
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  width: 150px;
+  text-align: start;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 34px;
+  height: 20px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: '';
+  height: 14px;
+  width: 14px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #848484;
+}
+
+input:checked + .slider:before {
+  transform: translateX(14px);
+}
+
+@media (max-width: 1425px) {
+  .menu-section {
+    flex-direction: row-reverse;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu-section {
+    flex-direction: row-reverse;
+  }
+
+  .logo {
+    display: none;
+  }
+
+  .divider {
+    display: none;
+  }
+
+  .header {
+    flex-wrap: wrap;
+  }
+}
